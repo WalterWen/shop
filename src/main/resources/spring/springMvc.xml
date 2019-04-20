@@ -50,7 +50,7 @@
 		 	<value>5242880</value>
 		 </property>
 	</bean>
-	<!--拦截器的配置 -->
+	<!--拦截器的配置 --> 
 	<!-- <mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/*.action"/>

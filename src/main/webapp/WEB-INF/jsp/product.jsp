@@ -4,12 +4,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<title>购物商城</title>
-	<link href="${pageContext.request.contextPath}/css/common.css"
-		rel="stylesheet" type="text/css">
-		<link href="${pageContext.request.contextPath}/css/product.css"
-			rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/css/product.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		function numadd(){
+			var num = $("#count").val();
+			num = parseInt(num) + 1;
+			$("#count").val(num);
+		}
+		
+		function numred(){
+			var num = $("#count").val();
+			if (num == 1) {
+				num = 1;
+			} else {
+				num = parseInt(num) - 1;
+				$("#count").val(num);
+			}
+			
+		}
+	</script>
 </head>
 <body>
 	<div class="container header">
@@ -54,20 +71,16 @@
 			<div class="productImage">
 				<div class="zoomPad">
 					<img style="opacity: 1;" title="" class="medium"
-						src="${pageContext.request.contextPath}/${product.image}">
-						<div
-							style="display: block; top: 0px; left: 162px; width: 0px; height: 0px; position: absolute; border-width: 1px;"
-							class="zoomPup"></div>
-						<div
-							style="position: absolute; z-index: 5001; left: 312px; top: 0px; display: block;"
-							class="zoomWindow">
+						src="${pageContext.request.contextPath}/${product.image}" />
+						<div style="display: block; top: 0px; left: 162px; width: 0px; height: 0px; position: absolute; border-width: 1px;" class="zoomPup"></div>
+						<div style="position: absolute; z-index: 5001; left: 312px; top: 0px; display: block;" class="zoomWindow">
 							<div style="width: 368px;" class="zoomWrapper">
 								<div style="width: 100%; position: absolute; display: none;"
 									class="zoomWrapperTitle"></div>
 								<div style="width: 0%; height: 0px;" class="zoomWrapperImage">
 									<img
 										src="%E5%B0%9A%E9%83%BD%E6%AF%94%E6%8B%89%E5%A5%B3%E8%A3%852013%E5%A4%8F%E8%A3%85%E6%96%B0%E6%AC%BE%E8%95%BE%E4%B8%9D%E8%BF%9E%E8%A1%A3%E8%A3%99%20%E9%9F%A9%E7%89%88%E4%BF%AE%E8%BA%AB%E9%9B%AA%E7%BA%BA%E6%89%93%E5%BA%95%E8%A3%99%E5%AD%90%20%E6%98%A5%E6%AC%BE%20-%20Powered%20By%20Mango%20Team_files/6d53c211-2325-41ed-8696-d8fbceb1c199-large.jpg"
-										style="position: absolute; border: 0px none; display: block; left: -432px; top: 0px;">
+										style="position: absolute; border: 0px none; display: block; left: -432px; top: 0px;" />
 								</div>
 							</div>
 						</div>
@@ -118,8 +131,8 @@
 							onpaste="return false;" type="text"/>
 							<div>
 							<!-- 设置数量的增加或减少 -->
-								<span id="increase" class="increase">&nbsp;</span> 
-								<span id="decrease" class="decrease">&nbsp;</span>
+								<span id="increase" onclick="numadd()" class="increase">&nbsp;</span> 
+								<span id="decrease" onclick="numred()" class="decrease">&nbsp;</span>
 							</div>
 					</dd>
 					<dd>件</dd>

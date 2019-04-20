@@ -2,6 +2,7 @@ package com.shop.po;
 
 import java.util.List;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class User {
@@ -13,7 +14,7 @@ public class User {
 
     private String name;
     
-   // @NotNull(message="{user.email.notNull}")
+    @NotNull(message="{user.email.notNull}")
     private String email;
 
     private String phone;

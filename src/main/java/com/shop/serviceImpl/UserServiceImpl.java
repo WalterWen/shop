@@ -38,12 +38,12 @@ public class UserServiceImpl implements UserService {
 		user.setState(0);
 		user.setCode(UUIDUtiils.getUUID());
 		int i = userMapper.insert(user);
-		System.out.println(i);
-		String emailMsg = "请激活<a href='http://localhost:8080/shop/activeUser.action?code="
-				+ user.getCode() + "'>激活</a>激活码是： + user.getCode()";
+		String emailMsg = "乐购网，欢迎您！<br/>用户激活，请点击此处&nbsp;<a href='http://localhost:8080/shop/activeUser.action?code="
+				+ user.getCode() + "'>点击激活 </a>";
 		try {
 			MailUtils.sendMail(user.getEmail(), emailMsg);
 		} catch (Exception e) {
+			
 		} 
 	}
 

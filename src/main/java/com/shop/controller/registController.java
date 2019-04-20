@@ -37,8 +37,7 @@ public class registController {
 			List<ObjectError> errors =bindingResult.getAllErrors();
 			List<String> list = new ArrayList<>();
 			for (ObjectError objectError : errors) {
-				String str = new String(objectError.getDefaultMessage()
-						.getBytes("ISO-8859-1"), "gbk");
+				String str = new String(objectError.getDefaultMessage().getBytes("ISO-8859-1"), "gbk");
 				list.add(str);
 			}
 			model.addAttribute("errors", list);
@@ -49,13 +48,13 @@ public class registController {
 				"checkcode");
 //		System.out.println("adadadad" + sessionCode);
 		if (!sessionCode.equalsIgnoreCase(checkImg)) {
-//			model.addAttribute("message", "验证码错误请重新注册");
-			throw new zdyException("验证码错误请重新注册");
+			model.addAttribute("message", "验证码错误请重新注册");
+//			throw new zdyException("验证码错误,请重新注册!");
 		}
 		// 开始写入数据库
 		userService.saveUser(user);
-		//model.addAttribute("message", "注册成功请去邮箱激活");
-		model.addAttribute("message", "注册成功请登录");
+		model.addAttribute("message", "注册成功,请去邮箱激活!");
+		//model.addAttribute("message", "注册成功请登录");
 		return "msg";
 	}
 
@@ -66,13 +65,13 @@ public class registController {
 		 */
 			User activeUser = userService.findByCode(code);
 			if(activeUser==null){
-//				model.addAttribute("message", "激活码被篡改了,请重新注册");
-				throw new zdyException("激活码被篡改了,请重新注册");
+				model.addAttribute("message", "激活码被篡改了,请重新注册");
+//				throw new zdyException("激活码被篡改了,请重新注册");
 			}
 			activeUser.setState(1);
-			activeUser.setCode(null);
+			activeUser.setCode("激活成功");
 			userService.activeUser(activeUser);
-			model.addAttribute("message", "激活码成功");
+			model.addAttribute("message", "激活成功,快去登录吧！");
 		return "msg";
 	}
 }
