@@ -69,7 +69,7 @@
 							target="_blank">
 							 <img
 								src="${pageContext.request.contextPath}/${p.image}"
-								width="170" height="170" style="display: inline-block;">
+								width="170" height="170" style="display: inline-block;" />
 								<span
 									style='color: green;align:center;'>${p.pname}</span> <span class="price">
 										商城价： ￥${p.shopPrice} </span>
@@ -90,7 +90,7 @@
 							target="_blank">
 							 <img
 								src="${pageContext.request.contextPath}/${n.image}"
-								width="170" height="170" style="display: inline-block;">
+								width="170" height="170" style="display: inline-block;" />
 								<span
 									style='color: green'>${n.pname}</span> <span class="price">
 										商城价： ￥${n.shopPrice} </span>
@@ -110,7 +110,7 @@
 			<div class="footerAd">
 			<center>
 				<img src="${pageContext.request.contextPath}/image/footer.jpg"
-					width="950" height="52" alt="我们的优势" title="我们的优势">
+					width="950" height="52" alt="我们的优势" title="我们的优势" />
 			</center>
 			</div>
 		

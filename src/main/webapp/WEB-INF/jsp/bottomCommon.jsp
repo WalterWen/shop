@@ -107,8 +107,7 @@ String path=request.getContextPath(); String basePath=request.getScheme()
                                         <img src="images/linkedin.png" alt="" />
                                     </a>
                                 </li>
-                                <div class="clear">
-                                </div>
+                                <div class="clear" ></div>
                             </ul>
                         </div>
                     </div>

@@ -10,7 +10,7 @@
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
 			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
-
+ 
 	<mvc:annotation-driven conversion-service="conversionService" validator="validator"></mvc:annotation-driven>
 	
 	<!-- 配置一个校验器 -->

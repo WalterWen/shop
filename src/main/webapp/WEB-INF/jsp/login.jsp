@@ -52,14 +52,14 @@ function change(){
 		<div class="span5">
 			<div class="logo">
 				<a href="http://localhost:8080/shop/"> <img
-					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="">
+					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="" />
 				</a>
 			</div>
 		</div>
 		<div class="span9">
 			<div class="headerAd">
 				<img src="${pageContext.request.contextPath}/image/header.jpg" width="320" height="50" alt="正品保障"
-					title="正品保障">
+					title="正品保障" />
 			</div>
 		</div>
 		<%@ include file="menu.jsp"%>
@@ -89,22 +89,22 @@ function change(){
 									<th>用户名/E-mail:</th>
 									<td>
 										<input type="text" id="username" name="username"
-										class="text" maxlength="20"  onblur="checkUsername()">
+										class="text" maxlength="20"  onblur="checkUsername()"/>
 										<span id="span1" style="color:green;"></span>
 									</td>
 								</tr>
 								<tr>
 									<th>密&nbsp;&nbsp;码:</th>
 									<td><input type="password" id="password" name="password"
-										class="text" maxlength="20" autocomplete="off"></td>
+										class="text" maxlength="20" autocomplete="off"/></td>
 								</tr>
 								<tr>
 									<th>验证码:</th>
 									<td>
 										<span class="fieldSet">
-										<input type="text" id="captcha" name="checkImg" class="text captcha" maxlength="4" autocomplete="off">
+										<input type="text" id="captcha" name="checkImg" class="text captcha" maxlength="4" autocomplete="off"/>
 										<img id="checkImg" class="captchaImage" src="${pageContext.request.contextPath}/checkImg.action"
-													title="点击更换验证码" onclick="change()"> 
+													title="点击更换验证码" onclick="change()"/> 
 										</span>
 									</td>
 								</tr>
@@ -112,14 +112,13 @@ function change(){
 									<th>&nbsp;</th>
 									<td><label> <input type="checkbox"
 											id="isRememberUsername" name="isRememberUsername"
-											value="true">记住用户名
+											value="true"/>记住用户名
 									</label> <label> &nbsp;&nbsp;<a>找回密码</a>
 									</label></td>
 								</tr>
 								<tr>
 									<th></th>
-									<td style="color:#ff0000;"><input type="submit" class="submit" value="登 录">
-									&nbsp;${message}
+									<td style="color:#ff0000;"><input type="submit" class="submit" value="登 录"/>&nbsp;${message}
 									</td>
 								</tr>
 								<tr class="register">
