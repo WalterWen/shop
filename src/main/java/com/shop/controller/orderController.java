@@ -1,5 +1,7 @@
 package com.shop.controller;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -35,9 +37,13 @@ public class orderController {
 			model.addAttribute("message", "对不起您还没有登录");
 			return "msg";
 		}
+
+		//取当前时间
+		Date nowdate=new Date();
+		SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 //		0表示没有付款、1表示已付款即将发货 2表示确认收货 3表示交易成功
 		orders.setState(0);
-		orders.setOrderTime(new Date());
+		orders.setOrderTime(Timestamp.valueOf(simpleDate.format(nowdate)));
 		orders.setUid(loginUser.getUid());
 		orders.setMoney(cart.getTotale());
 

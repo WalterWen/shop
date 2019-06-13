@@ -26,6 +26,7 @@ function checkUsername() {
 		}
 	}
 }
+
 function creatXMLHttpreauest() {
 	try {
 		return new XMLHttpRequest();
